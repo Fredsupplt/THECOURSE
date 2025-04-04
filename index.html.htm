@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            color: red;
+        }
+        .password-box {
+            margin-top: 20px;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .course-container {
+            display: none;
+        }
+        .lesson {
+            margin: 10px 0;
+            padding: 15px;
+            background: #222;
+            border-radius: 5px;
+            text-align: left;
+            cursor: pointer;
+        }
+        .lesson-content {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="password-container">
+        <h1>Welcome! You Took The Step To Making Money Online</h1>
+        <p>Enter the password to access the course:</p>
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Try again.</p>
+    </div>
+
+    <div class="container course-container" id="course-container">
+        <h1>Welcome to Your Course</h1>
+        <p>Congratulations on taking the step to learn and earn online!</p>
+
+        <div class="lesson" onclick="toggleLesson('lesson1')">
+            <h2>Lesson 1: UK Supplier List</h2>
+            <div class="lesson-content" id="lesson1">
+                <p>07716436837<br>07886111639 Alex<br>07446800064 Ash<br>07983080021 Frank<br>0757752268 Maj<br>07383313441 James<br>07803391211 Same<br>07496767177 Sammy<br>07476908899 Zac</p>
+                <p><strong>ABOVE LISTED ARE ALL UK SUPPLIERS</strong><br>
+                Message them saying: "Hi, I got your number from Fred. He goes to Pitsea and said I can get clothes off you." </p>
+            </div>
+        </div>
+
+        <div class="lesson" onclick="toggleLesson('lesson2')">
+            <h2>Lesson 2: Vinted Chop</h2>
+            <div class="lesson-content" id="lesson2">
+                <p>Okay, so here's where the real money is involved.<br>
+                I identified a way to sell reps on Vinted, such as perfumes and colognes.<br>
+                This gives you easy access to around **3-4x profit**.</p>
+                
+                <p><strong>Here's the key objectives:</strong></p>
+                <ol>
+                    <li>MUST have a **1-year+ old Vinted account** (a lot of girls run them for me).</li>
+                    <li>Invest **£35** into my starter pack containing **2 perfumes**, which you will sell for **£35-£45 each**.</li>
+                    <li>Reinvest the money you make until you feel you're making enough to take money out.</li>
+                </ol>
+                
+                <p><strong>PERFUME DEALS:</strong></p>
+                <ul>
+                    <li>1-5 = **£12 each** + shipping</li>
+                    <li>10 = **£11 each** + shipping</li>
+                    <li>20 = **£10.50 each** + shipping</li>
+                    <li>50 = **£9.50 each** + shipping</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lesson" onclick="toggleLesson('lesson3')">
+            <h2>Lesson 3: Growth and Marketing</h2>
+            <div class="lesson-content" id="lesson3">
+                <p>Here is where we learn about growth of your sales and marketing.</p>
+                <ul>
+                    <li>Create a Telegram channel, TikTok, and Facebook.</li>
+                    <li>Create a logo that you can use (I can help).</li>
+                    <li>Post your items from Pgarmz channel or mine.</li>
+                    <li>Start sharing the Telegram channel with friends and family.</li>
+                    <li>Always promote.</li>
+                    <li>Use WhatsApp / Telegram for all orders.</li>
+                    <li>Don't use your real name on WhatsApp.</li>
+                    <li>Set up WhatsApp Business for tools like quick replies, away messages, and automated welcome messages.</li>
+                </ul>
+                <p>The best method I found for growth was TikTok lives but you need 1000 followers. Here's what I did:</p>
+                <ul>
+                    <li>Paid for 1100 fake TikTok followers to get access to live videos.</li>
+                    <li>Bought lots of stock like watches and shoes.</li>
+                    <li>Every live session gained me around 100 Telegram subscribers and loads of sales.</li>
+                    <li>You can purchase followers from TSSMG on Google.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "Fredsupply1") {
+                document.getElementById("password-container").style.display = "none";
+                document.getElementById("course-container").style.display = "block";
+            } else {
+                document.getElementById("error-message").style.display = "block";
+            }
+        }
+
+        function toggleLesson(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
